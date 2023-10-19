@@ -163,4 +163,4 @@ cython_debug/
 #environment variables
 credentials.py
 /data/
-spotify_data/spotify_credentials.json
+API_data/spotify_credentials.json
