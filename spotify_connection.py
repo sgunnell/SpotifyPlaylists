@@ -35,3 +35,8 @@ def spotify_connect(credentials_file):
     print('Link:', user_data['external_urls']['spotify'])
 
     return sp
+
+if __name__ == "__main__":
+    #top level test of spotify connection.py to ensure correct connection to API
+    credentials_details_json = 'API_data/spotify_credentials.json'
+    sp = spotify_connect(credentials_details_json)
