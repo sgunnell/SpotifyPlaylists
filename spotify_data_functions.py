@@ -3,10 +3,7 @@ import spotipy
 import pandas as pd
 import matplotlib.pyplot as plt
 #import seaborn as sns
-from spotify_connection import spotify_connect
 
-credentials_details_json = 'API_data/spotify_credentials.json'
-sp = spotify_connect(credentials_details_json)
 # get short term top tracks
 def short_term_top_tracks_ids(sp):
     """
@@ -74,6 +71,17 @@ def long_term_top_tracks_ids(sp):
     top_tracks_ids_df = top_tracks_ids_df.drop_duplicates()
     return top_tracks_ids_df
 
+def get_top_tracks(sp):
+    """
+    :param sp: Spotify OAuth
+    :return: pandas dataframe of ids of all top tracks long to short term
+    """
+    top_tracks_ST = short_term_top_tracks_ids(sp)
+    top_tracks_MT = medium_term_top_tracks_ids(sp)
+    top_tracks_LT = long_term_top_tracks_ids(sp)
+
+    return pd.concat([top_tracks_ST,top_tracks_MT,top_tracks_LT])
+
 def get_saved_tracks_ids_dataframe(sp):
     """
     We get the ids of all tracks that the user has saved.
@@ -96,7 +104,51 @@ def get_saved_tracks_ids_dataframe(sp):
     saved_tracks_ids_df = saved_tracks_ids_df.drop_duplicates()
     return saved_tracks_ids_df
 
-def get_top_tracks_ids_of_top_artists_dataframe(sp):
+def get_top_artists(sp):
+    """
+    We get the ids of all top artists of the user.
+
+    :param sp: Spotify OAuth
+    :return: pandas dataframe of ids of all top artists
+    """
+    # get more than 50 top artists id since api limits it to 50
+    results = sp.current_user_top_artists()
+    
+    top_artists_list = results['items']
+    while results['next']:
+        results = sp.next(results)
+        top_artists_list.extend(results['items'])
+    
+    # get a list of only artists ids
+    top_artists_id_list = []
+    for i in range(len(top_artists_list)):
+        top_artists_id_list.append(top_artists_list[i]['id'])
+        #print(top_artists_list[i]['name'])
+
+    top_artists_df = pd.DataFrame(top_artists_id_list, columns=['id'])
+    top_artists_df = top_artists_df.drop_duplicates()
+    return top_artists_df
+
+def get_top_tracks(sp, artists_df):
+    """
+    We get the ids of 10 top tracks of artists passed as input.
+
+    :param sp: Spotify OAuth
+    :return: pandas dataframe of top 10 tracks ids of inputted artists
+    """ 
+    # using artists id we can get their top 10 tracks
+    all_top_artists_top_tracks_ids_list = []
+    for artist_id in artists_df.values.tolist():
+        #print(artist_id[0])
+        artist_top_tracks = sp.artist_top_tracks(artist_id[0])
+        for j in range(len(artist_top_tracks['tracks'])):
+            all_top_artists_top_tracks_ids_list.append(artist_top_tracks['tracks'][j]['id'])
+
+    top_tracks_of_top_artists_df = pd.DataFrame(all_top_artists_top_tracks_ids_list, columns=['id'])
+    top_tracks_of_top_artists_df = top_tracks_of_top_artists_df.drop_duplicates()
+    return top_tracks_of_top_artists_df
+
+def get_top_tracks_ids_of_top_artists(sp):
     """
     We get the ids of 10 top tracks of all top artists of the user.
 
@@ -195,4 +247,8 @@ def get_tracklist_features(sp, df):
 
     
 
-get_tracklist_features(sp, short_term_top_tracks_ids(sp))
+#print(get_tracklist_features(sp, get_top_tracks_ids_of_top_artists_dataframe(sp)))
+#print(short_term_top_tracks_ids(sp))
+
+#print(sp.track(track_id='1R0a2iXumgCiFb7HEZ7gUE'))
+#print(sp.audio_features(tracks='1R0a2iXumgCiFb7HEZ7gUE'))
