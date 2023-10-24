@@ -2,6 +2,7 @@
 import spotipy
 import pandas as pd
 import matplotlib.pyplot as plt
+import string
 #import seaborn as sns
 
 # get short term top tracks
@@ -71,7 +72,7 @@ def long_term_top_tracks_ids(sp):
     top_tracks_ids_df = top_tracks_ids_df.drop_duplicates()
     return top_tracks_ids_df
 
-def get_top_tracks(sp):
+def get_users_top_tracks(sp):
     """
     :param sp: Spotify OAuth
     :return: pandas dataframe of ids of all top tracks long to short term
@@ -129,7 +130,7 @@ def get_top_artists(sp):
     top_artists_df = top_artists_df.drop_duplicates()
     return top_artists_df
 
-def get_top_tracks(sp, artists_df):
+def get_artists_top_tracks(sp, artists_df):
     """
     We get the ids of 10 top tracks of artists passed as input.
 
@@ -178,6 +179,59 @@ def get_top_tracks_ids_of_top_artists(sp):
     top_tracks_of_top_artists_df = pd.DataFrame(all_top_artists_top_tracks_ids_list, columns=['id'])
     top_tracks_of_top_artists_df = top_tracks_of_top_artists_df.drop_duplicates()
     return top_tracks_of_top_artists_df
+ 
+def get_recommended_tracks(sp):
+    """
+    use users top tracks to get 100 recommended tracks via spotify.
+    
+    We will evaluate our model on this dataset and create playlist from these tracks
+
+    :param sp: Spotify OAuth
+    :return: pandas dataframe of recommended tracks based on top tracks and corresponding track features
+    """
+
+    # get top tracks ids list using get_top_tracks_ids_dataframe
+    #top_tracks_ids_df = get_users_top_tracks(sp)
+    #top_tracks_ids_list = top_tracks_ids_df['id'].to_list()
+    
+    top_tracks_ids_list = pd.read_csv('spotify_data/top_tracks_copy.csv')['id'].tolist()
+
+    # get list of recommended tracks ids (100 each) for each top track
+    recommended_tracks_ids_list = []
+    for current_top_track_id in top_tracks_ids_list:
+        # get 90 recommended tracks per top track
+        print("getting recs for:", current_top_track_id)
+        recommended_tracks = sp.recommendations(seed_tracks=[current_top_track_id], limit=90)['tracks']
+        for i in range(len(recommended_tracks)):
+            print(i)
+            recommended_tracks_ids_list.append(recommended_tracks[i]['id'])
+    
+    recommended_tracks_ids = pd.DataFrame(recommended_tracks_ids_list, columns=['id'])
+    recommended_tracks_ids = recommended_tracks_ids.drop_duplicates()
+    return recommended_tracks_ids
+
+def get_random_tracks_ids(sp):
+    """
+    There is no API call which gives us random songs.
+    sp.search() can be used instead with a wildcard mask, %a% means the song will contain an a.
+    For all 26 alphabets and 10 numbers we can repeat this 36 times and upto 50 times per wildcard mask or 36*50 tracks.
+    I took ~ 1000 random tracks
+
+    :param sp: Spotify OAuth
+    :return: pandas dataframe of random tracks ids
+    """
+
+    random_tracks_ids_list = list()
+
+    characters = string.ascii_uppercase + string.digits
+    for chars in characters:
+        search = sp.search(q=f'{chars}%', limit=29)
+        for i in range(len(search['tracks']['items'])):
+            random_tracks_ids_list.append(search['tracks']['items'][i]['id'])
+
+    random_tracks_ids_df = pd.DataFrame(random_tracks_ids_list, columns=['id'])
+    random_tracks_ids_df = random_tracks_ids_df.drop_duplicates()
+    return random_tracks_ids_df
 
 def get_tracklist_features(sp, df):
     """
@@ -243,12 +297,11 @@ def get_tracklist_features(sp, df):
     tracks_features_df = pd.DataFrame(data=tracks_features)
     tracks_features_df = tracks_features_df.drop_duplicates(subset='id')
     return tracks_features_df
- 
 
-    
 
-#print(get_tracklist_features(sp, get_top_tracks_ids_of_top_artists_dataframe(sp)))
-#print(short_term_top_tracks_ids(sp))
-
-#print(sp.track(track_id='1R0a2iXumgCiFb7HEZ7gUE'))
-#print(sp.audio_features(tracks='1R0a2iXumgCiFb7HEZ7gUE'))
+if __name__ == "__main__":
+    #top level test of spotify connection.py to ensure correct connection to API
+    from spotify_connection import spotify_connect
+    credentials_details_json = 'API_data/spotify_credentials.json'
+    sp = spotify_connect(credentials_details_json)
+    print(sp.recommendations(seed_tracks=['1R0a2iXumgCiFb7HEZ7gUE','18vXApRmJSgQ6wG2ll9AOg','3RaCGXCiiMufRPoexXxGkV','7rRVHNqYBjIjKdNRheCDud','4sx6NRwL6Ol3V6m9exwGlQ', '444vevlQjTnKioLLncteGv'], limit=10))
