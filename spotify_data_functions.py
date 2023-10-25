@@ -3,7 +3,12 @@ import spotipy
 import pandas as pd
 import matplotlib.pyplot as plt
 import string
+from tqdm import tqdm
+import urllib3
+import requests
 #import seaborn as sns
+import time
+from icecream import ic 
 
 # get short term top tracks
 def short_term_top_tracks_ids(sp):
@@ -22,7 +27,7 @@ def short_term_top_tracks_ids(sp):
         results = sp.next(results)
         top_tracks_list.extend(results['items'])
     # get a list of only the track ids
-    for i in range(len(top_tracks_list)):
+    for i in tqdm(range(len(top_tracks_list))):
         top_tracks_ids_list.append(top_tracks_list[i]['id'])
     top_tracks_ids_df = pd.DataFrame(top_tracks_ids_list, columns=['id'])
     top_tracks_ids_df = top_tracks_ids_df.drop_duplicates()
@@ -44,7 +49,7 @@ def medium_term_top_tracks_ids(sp):
         results = sp.next(results)
         top_tracks_list.extend(results['items'])
     # get a list of only the track ids
-    for i in range(len(top_tracks_list)):
+    for i in tqdm(range(len(top_tracks_list))):
         top_tracks_ids_list.append(top_tracks_list[i]['id'])
     top_tracks_ids_df = pd.DataFrame(top_tracks_ids_list, columns=['id'])
     top_tracks_ids_df = top_tracks_ids_df.drop_duplicates()
@@ -66,7 +71,7 @@ def long_term_top_tracks_ids(sp):
         results = sp.next(results)
         top_tracks_list.extend(results['items'])
     # get a list of only the track ids
-    for i in range(len(top_tracks_list)):
+    for i in tqdm(range(len(top_tracks_list))):
         top_tracks_ids_list.append(top_tracks_list[i]['id'])
     top_tracks_ids_df = pd.DataFrame(top_tracks_ids_list, columns=['id'])
     top_tracks_ids_df = top_tracks_ids_df.drop_duplicates()
@@ -81,7 +86,7 @@ def get_users_top_tracks(sp):
     top_tracks_MT = medium_term_top_tracks_ids(sp)
     top_tracks_LT = long_term_top_tracks_ids(sp)
 
-    return pd.concat([top_tracks_ST,top_tracks_MT,top_tracks_LT])
+    return pd.concat([top_tracks_ST,top_tracks_MT,top_tracks_LT]).drop_duplicates(subset='id')
 
 def get_saved_tracks_ids_dataframe(sp):
     """
@@ -124,7 +129,7 @@ def get_top_artists(sp):
     top_artists_id_list = []
     for i in range(len(top_artists_list)):
         top_artists_id_list.append(top_artists_list[i]['id'])
-        #print(top_artists_list[i]['name'])
+        #ic(top_artists_list[i]['name'])
 
     top_artists_df = pd.DataFrame(top_artists_id_list, columns=['id'])
     top_artists_df = top_artists_df.drop_duplicates()
@@ -140,7 +145,7 @@ def get_artists_top_tracks(sp, artists_df):
     # using artists id we can get their top 10 tracks
     all_top_artists_top_tracks_ids_list = []
     for artist_id in artists_df.values.tolist():
-        #print(artist_id[0])
+        #ic(artist_id[0])
         artist_top_tracks = sp.artist_top_tracks(artist_id[0])
         for j in range(len(artist_top_tracks['tracks'])):
             all_top_artists_top_tracks_ids_list.append(artist_top_tracks['tracks'][j]['id'])
@@ -167,7 +172,7 @@ def get_top_tracks_ids_of_top_artists(sp):
     top_artists_id_list = list()
     for i in range(len(top_artists_list)):
         top_artists_id_list.append(top_artists_list[i]['id'])
-        print(top_artists_list[i]['name'])
+        ic(top_artists_list[i]['name'])
 
     # using these artists id we can get their top 10 tracks
     all_top_artists_top_tracks_ids_list = list()
@@ -180,7 +185,7 @@ def get_top_tracks_ids_of_top_artists(sp):
     top_tracks_of_top_artists_df = top_tracks_of_top_artists_df.drop_duplicates()
     return top_tracks_of_top_artists_df
  
-def get_recommended_tracks(sp):
+def get_recommended_tracks(sp, limit = 20):
     """
     use users top tracks to get 100 recommended tracks via spotify.
     
@@ -191,20 +196,28 @@ def get_recommended_tracks(sp):
     """
 
     # get top tracks ids list using get_top_tracks_ids_dataframe
-    #top_tracks_ids_df = get_users_top_tracks(sp)
-    #top_tracks_ids_list = top_tracks_ids_df['id'].to_list()
     
-    top_tracks_ids_list = pd.read_csv('spotify_data/top_tracks_copy.csv')['id'].tolist()
+    try:
+        top_tracks_ids_list = pd.read_csv('spotify_data/top_tracks.csv')['id'].tolist()
+    except:
+        top_tracks_ids_df = get_users_top_tracks(sp)
+        top_tracks_ids_list = top_tracks_ids_df['id'].to_list()
 
     # get list of recommended tracks ids (100 each) for each top track
     recommended_tracks_ids_list = []
-    for current_top_track_id in top_tracks_ids_list:
+    for current_top_track_id in tqdm(top_tracks_ids_list):
         # get 90 recommended tracks per top track
-        print("getting recs for:", current_top_track_id)
-        recommended_tracks = sp.recommendations(seed_tracks=[current_top_track_id], limit=90)['tracks']
+        #ic("getting recs for:", current_top_track_id)
+        try:
+            recommended_tracks = sp.recommendations(seed_tracks=[current_top_track_id], limit=limit)['tracks']
+        except:
+            ic("error requesting recommendations")
+            ic(recommended_tracks)
+            break
         for i in range(len(recommended_tracks)):
-            print(i)
+            #ic(i)
             recommended_tracks_ids_list.append(recommended_tracks[i]['id'])
+        time.sleep(2)
     
     recommended_tracks_ids = pd.DataFrame(recommended_tracks_ids_list, columns=['id'])
     recommended_tracks_ids = recommended_tracks_ids.drop_duplicates()
@@ -243,20 +256,39 @@ def get_tracklist_features(sp, df):
     """
     tracks_ids_list = df['id'].to_list()
     popularity, explicit, duration_ms, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time_signature, genre = list(), list(), list(), list(), list(),list(), list(), list(), list(), list(),list(), list(), list(), list(), list(), list()
-    
-    for i,track_id in enumerate(tracks_ids_list):
-
-        # Check to skip tracks with broken data
-        if sp.audio_features(tracks=track_id)[0] is None:
-            continue
-            print('Skipped a track')
+    copy_tracks_list = tracks_ids_list
+    max_index = 0
+    for i,track_id in enumerate(tqdm(tracks_ids_list)):
 
         # Status
-        print(f'{round(float(i/len(tracks_ids_list)*100), 2)}% done...')
-
-
-        track_data = sp.track(track_id=track_id)
-        track_audio_features = sp.audio_features(tracks=track_id)[0]
+        #ic(f'{round(float(i/len(tracks_ids_list)*100), 2)}% done...')
+        try:
+            track_data = sp.track(track_id=track_id)
+            track_audio_features = sp.audio_features(tracks=track_id)[0]
+            if sp.audio_features(tracks=track_id)[0] is None:
+                ic('Skipped a track')
+                ic(i,track_id)
+                copy_tracks_list.remove(track_id)
+                continue
+        except spotipy.exceptions.SpotifyException:
+            ic(spotipy.SpotifyException)
+            ic(i,track_id)
+            break
+        except spotipy.exceptions.SpotifyOauthError:
+            ic(spotipy.SpotifyOauthError)
+            ic(i,track_id)
+            break
+        except requests.exceptions.RequestException:
+            ic( requests.exceptions.RequestException)
+            ic(i,track_id)
+            break
+        except urllib3.exceptions.ResponseError:
+            ic(urllib3.exceptions.ResponseError)
+            ic(i,track_id)
+            break
+        except:
+            ic("undetected error")
+        max_index = i
         artists_id = track_data['artists'][0]['id']
         popularity.append(track_data['popularity'])
         explicit.append(track_data['explicit'])
@@ -275,7 +307,9 @@ def get_tracklist_features(sp, df):
         time_signature.append(track_audio_features['time_signature'])
         genre.append(sp.artist(artist_id=artists_id)['genres'])
 
-    tracks_features = {'id':tracks_ids_list,
+    num_removed = len(tracks_ids_list)-len(copy_tracks_list)
+    ic(max_index+1-num_removed)
+    tracks_features = {'id':copy_tracks_list[:max_index+1-num_removed],
                        'popularity': popularity,
                        'explicit': explicit,
                        'duration_ms': duration_ms,
@@ -293,6 +327,7 @@ def get_tracklist_features(sp, df):
                        'time_signature': time_signature,
                        'genre': genre
                        }
+    time.sleep(1)
 
     tracks_features_df = pd.DataFrame(data=tracks_features)
     tracks_features_df = tracks_features_df.drop_duplicates(subset='id')
@@ -302,6 +337,19 @@ def get_tracklist_features(sp, df):
 if __name__ == "__main__":
     #top level test of spotify connection.py to ensure correct connection to API
     from spotify_connection import spotify_connect
-    credentials_details_json = 'API_data/spotify_credentials.json'
+    credentials_details_json = 'API_data/spotify_credentials_recs.json'
     sp = spotify_connect(credentials_details_json)
-    print(sp.recommendations(seed_tracks=['1R0a2iXumgCiFb7HEZ7gUE','18vXApRmJSgQ6wG2ll9AOg','3RaCGXCiiMufRPoexXxGkV','7rRVHNqYBjIjKdNRheCDud','4sx6NRwL6Ol3V6m9exwGlQ', '444vevlQjTnKioLLncteGv'], limit=10))
+    ic("trying to get any recommendations")
+    try:
+        track_data = sp.track(track_id='1R0a2iXumgCiFb7HEZ7gUE')
+        track_audio_features = sp.audio_features(tracks='1R0a2iXumgCiFb7HEZ7gUE')[0]
+        #reqs = sp.recommendations(seed_tracks=['spotify:track:1R0a2iXumgCiFb7HEZ7gUE','spotify:track:18vXApRmJSgQ6wG2ll9AOg','spotify:track:3RaCGXCiiMufRPoexXxGkV','spotify:track:7rRVHNqYBjIjKdNRheCDud','spotify:track:4sx6NRwL6Ol3V6m9exwGlQ'], limit=20)['tracks']
+    except spotipy.SpotifyException :
+        ic(spotipy.SpotifyException)
+    except spotipy.SpotifyOauthError:
+        ic(spotipy.SpotifyOauthError)
+    
+    
+    """for i in tqdm(reqs):
+            print(i['name'])
+            #recommended_tracks_ids_list.append(recommended_tracks[i]['id'])"""
