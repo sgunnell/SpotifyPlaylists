@@ -1,0 +1,132 @@
+,id,popularity,explicit,duration_ms,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature,genre
+0,1R0a2iXumgCiFb7HEZ7gUE,92,False,236413,0.615,0.534,9,-6.719,0,0.0386,0.106,1.76e-05,0.0607,0.193,135.917,4,['pop']
+1,18vXApRmJSgQ6wG2ll9AOg,82,True,165925,0.789,0.536,6,-6.862,1,0.242,0.41,0.0,0.129,0.437,81.039,4,"['chicago rap', 'rap']"
+2,3RaCGXCiiMufRPoexXxGkV,89,True,310490,0.483,0.408,5,-9.243,0,0.0502,0.508,0.0,0.259,0.105,88.88,3,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+3,7rRVHNqYBjIjKdNRheCDud,40,False,172936,0.361,0.813,0,-4.426,0,0.193,0.0422,0.0,0.132,0.215,204.064,4,['tassie indie']
+4,4sx6NRwL6Ol3V6m9exwGlQ,78,False,146640,0.662,0.398,11,-6.691,0,0.0275,0.716,0.0,0.111,0.468,107.001,4,['australian hip hop']
+5,444vevlQjTnKioLLncteGv,76,True,205287,0.445,0.797,11,-5.086,0,0.0434,0.000227,0.0,0.363,0.267,135.483,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+6,4iya38ctQ1httyA6NOG9oW,70,False,270887,0.374,0.778,5,-4.466,1,0.0363,0.1,0.199,0.107,0.484,133.85,3,"['modern blues rock', 'modern hard rock', 'rock']"
+7,4KULAymBBJcPRpk1yO4dOG,94,False,227195,0.429,0.453,0,-7.746,1,0.0459,0.554,2e-06,0.102,0.155,77.639,4,"['classic oklahoma country', 'modern country pop']"
+8,6QvldZZ10eYgKamaWfG52b,51,True,224250,0.576,0.558,2,-6.216,0,0.0342,0.0807,0.0,0.245,0.182,80.005,4,['indie electropop']
+9,0KG7XrgM20KEmJrKsyFDAm,59,False,234374,0.584,0.955,7,-4.197,0,0.0507,0.101,0.00243,0.092,0.486,128.04,4,"['dance pop', 'edm', 'electro house', 'moombahton', 'pop dance']"
+10,0GJAh8pOb6YoUcnyrPETnY,37,False,202858,0.734,0.877,9,-3.488,0,0.116,0.00612,0.000977,0.271,0.32,124.917,4,"['aussietronica', 'australian electropop', 'australian indie', 'edm']"
+11,67nepsnrcZkowTxMWigSbb,91,True,246133,0.557,0.774,7,-5.275,0,0.351,0.012,0.0,0.396,0.397,111.975,4,"['hip hop', 'rap', 'slap house']"
+12,0PAcdVzhPO4gq1Iym9ESnK,86,False,177387,0.656,0.757,3,-5.775,0,0.0308,0.492,0.0,0.117,0.429,139.971,4,['contemporary country']
+13,3WMj8moIAXJhHsyLaqIIHI,90,False,228013,0.369,0.192,4,-12.151,0,0.04,0.555,8.35e-06,0.0954,0.148,175.212,3,"['classic oklahoma country', 'modern country pop']"
+14,4h9wh7iOZ0GGn8QVp4RAOB,91,False,148485,0.704,0.797,0,-5.927,1,0.0475,0.0826,0.000745,0.0546,0.825,139.994,4,"['piano rock', 'pop']"
+15,4B4vB3oB8csotplfoQcAd6,73,True,247002,0.52,0.496,5,-8.121,1,0.0271,0.0234,2.05e-05,0.0905,0.496,138.81,4,"['modern folk rock', 'modern rock', 'neo mellow', 'stomp and holler', 'uk americana']"
+16,0O6u0VJ46W86TxN9wgyqDj,87,True,192840,0.733,0.67,5,-6.009,1,0.0751,0.121,0.0,0.121,0.472,100.964,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+17,0VO8gYVDSwM1Qdd2GsMoYK,83,False,234000,0.553,0.659,8,-7.295,1,0.0391,0.0027,0.0,0.105,0.105,120.146,4,"['edm', 'pop dance', 'progressive electro house']"
+18,2KReCz1L5XkGIBhDncQ5VZ,80,False,164682,0.622,0.715,6,-4.04,0,0.0323,0.000982,0.0,0.0796,0.607,131.012,4,"['indie rock italiano', 'italian pop']"
+19,5MwynWK9s4hlyKHqhkNn4A,83,False,205453,0.631,0.591,7,-5.785,1,0.0277,0.657,0.0,0.11,0.489,97.074,4,['contemporary country']
+20,3QzAOrNlsabgbMwlZt7TAY,81,True,180434,0.809,0.545,7,-6.678,1,0.0735,0.392,0.0,0.151,0.244,97.008,4,"['cali rap', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+21,3o9kpgkIcffx0iSwxhuNI2,77,False,169237,0.742,0.527,8,-6.892,0,0.0769,0.327,0.0,0.25,0.638,84.974,4,"['alt z', 'gen z singer-songwriter']"
+22,0QNNd0qMCDbraS1nQPg3aA,74,True,142657,0.821,0.636,11,-4.479,1,0.169,0.142,0.0,0.233,0.163,127.961,4,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+23,0g2Bbgy7P41pFjMWJuzsf4,69,True,178176,0.718,0.461,4,-7.676,0,0.0797,0.068,0.0,0.283,0.181,129.953,4,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+24,1Lo0QY9cvc8sUB2vnIOxDT,90,False,265493,0.712,0.603,8,-5.52,1,0.0262,0.186,0.0,0.115,0.67,97.994,4,"['contemporary country', 'country']"
+25,1NvpO1o8SpkdH3txtJQQc7,69,True,243486,0.611,0.584,11,-6.897,0,0.0301,0.083,0.0,0.432,0.181,116.106,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+26,1UC4lp9d11wTkShH9pj25B,3,True,203229,0.741,0.929,4,-4.221,0,0.133,0.0436,0.0104,0.09,0.413,156.039,4,['electronic trap']
+27,1r9xUipOqoNwggBpENDsvJ,81,False,173381,0.728,0.783,11,-4.424,0,0.266,0.237,0.0,0.434,0.555,77.011,4,"['modern rock', 'pop', 'rock']"
+28,1xwAWUI6Dj0WGC3KiUPN0O,82,True,164801,0.798,0.277,4,-11.096,0,0.39,0.173,5.25e-05,0.121,0.163,79.846,4,['pop']
+29,3DMs7bahbQTnoxCjgP7qoK,62,True,184800,0.675,0.608,3,-6.934,0,0.103,0.336,0.0,0.11,0.728,99.865,4,"['brooklyn drill', 'rap']"
+30,3d8y0t70g7hw2FOWl9Z4Fm,80,False,160097,0.664,0.573,5,-6.519,1,0.0277,0.613,0.000363,0.0857,0.566,76.023,4,"['folk-pop', 'modern rock', 'stomp and holler']"
+31,5902W4uHWzhtOff1UK7the,77,False,161266,0.685,0.886,0,-4.179,1,0.034,0.028,0.0,0.481,0.615,125.034,4,"['dance pop', 'edm', 'pop', 'pop dance', 'progressive electro house']"
+32,5mHdCZtVyb4DcJw8799hZp,86,True,272373,0.538,0.742,2,-5.355,1,0.114,0.138,4.67e-05,0.0934,0.25,96.107,4,"['uk contemporary r&b', 'uk pop']"
+33,5uWEE2Djt91KtvLPW6m70I,17,False,199976,0.768,0.825,8,-2.777,0,0.301,0.158,0.00176,0.0926,0.954,159.972,4,"['bass house', 'electro house', 'tech house']"
+34,6w8ZPYdnGajyfPddTWdthN,74,False,210384,0.703,0.68,9,-6.118,0,0.0431,0.0171,0.0,0.178,0.536,97.985,4,"['british soul', 'pop', 'pop soul', 'uk pop']"
+35,1BxfuPKGuaTgP7aM0Bbdwr,100,False,178426,0.552,0.702,9,-5.707,1,0.157,0.117,2.06e-05,0.105,0.564,169.994,4,['pop']
+36,1hGy2eLcmC8eKx7qr1tOqx,81,False,225373,0.762,0.661,1,-6.075,0,0.0687,0.15,0.0,0.256,0.769,130.009,4,"['dance pop', 'miami hip hop', 'pop']"
+37,1rXq0uoV4KTgRN64jXzIxo,79,False,206864,0.613,0.914,7,-5.153,1,0.03,0.00522,2.21e-06,0.26,0.916,141.978,4,['contemporary country']
+38,2b7FqlHc3JrzlYtGEkzq22,62,True,301466,0.873,0.816,9,-4.645,1,0.256,0.483,0.0,0.146,0.79,96.067,4,"['east coast hip hop', 'gangster rap', 'hardcore hip hop', 'hip hop', 'rap']"
+39,3hUxzQpSfdDqwM3ZTFQY0K,92,False,261922,0.532,0.623,5,-9.208,1,0.0331,0.538,7.28e-05,0.0925,0.403,89.937,4,['pop']
+40,4NmNw3RnHtp6t6M0DjP1v3,56,True,197142,0.451,0.656,1,-6.303,1,0.0682,0.00513,2.08e-06,0.293,0.392,140.086,4,"['aussietronica', 'brostep', 'edm', 'electro house', 'electronic trap', 'escape room', 'vapor twitch']"
+41,4b93D55xv3YCH5mT4p6HPn,74,False,206320,0.67,0.776,8,-4.091,0,0.047,0.00388,0.000184,0.122,0.624,115.034,4,"['edm', 'house', 'pop dance', 'progressive house', 'uk dance']"
+42,4lIxdJw6W3Fg4vUIYCB0S5,83,False,231000,0.598,0.786,2,-5.572,1,0.0383,0.00253,0.0016,0.117,0.456,95.019,4,['pop']
+43,4pmc2AxSEq6g7hPVlJCPyP,73,False,230200,0.771,0.685,1,-4.639,1,0.0567,0.00543,0.00157,0.0537,0.683,88.997,4,"['dance pop', 'girl group', 'pop', 'r&b', 'urban contemporary']"
+44,5d2sGAcNwi1AhYM9XqjnGt,36,False,214916,0.637,0.967,6,-3.616,1,0.0547,0.00599,6.37e-05,0.502,0.796,145.014,4,"['dance pop', 'edm', 'electro house', 'moombahton', 'pop', 'pop dance']"
+45,5e2VEiVtXMXQSKsUZjxMBB,23,False,206250,0.652,0.84,5,-3.806,0,0.0321,0.0773,0.826,0.0487,0.609,127.992,4,"['dutch house', 'electro house', 'progressive electro house', 'progressive house']"
+46,5yY9lUy8nbvjM1Uyo1Uqoc,78,True,237735,0.676,0.609,2,-5.831,0,0.481,0.0706,0.0,0.152,0.508,142.037,4,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+47,62Yo3FDddWY8ydu6PW2wyz,69,True,206385,0.677,0.557,1,-8.409,1,0.0694,0.00508,8.36e-06,0.0984,0.1,150.127,4,"['deep underground hip hop', 'kentucky hip hop', 'pop rap', 'rap']"
+48,68vgtRHr7iZHpzGpon6Jlo,81,False,223440,0.662,0.507,5,-8.238,1,0.118,0.257,0.0,0.0465,0.676,86.412,4,"['atl hip hop', 'contemporary r&b', 'dance pop', 'pop', 'r&b', 'rap', 'south carolina hip hop', 'urban contemporary']"
+49,6juLaduD4STCUDWT0AYun4,72,False,217088,0.66,0.787,1,-4.592,0,0.032,0.00257,0.0,0.323,0.199,142.018,4,['k-pop girl group']
+50,70C4NyhjD5OZUMzvWZ3njJ,78,False,339000,0.331,0.55,0,-6.483,1,0.0272,0.605,3.96e-06,0.192,0.429,177.734,3,"['album rock', 'classic rock', 'heartland rock', 'mellow gold', 'piano rock', 'rock', 'singer-songwriter', 'soft rock']"
+51,7hU38LHqMSPFrvoqADFJp4,55,False,207292,0.823,0.815,11,-3.947,1,0.134,0.00129,0.0494,0.599,0.474,125.989,4,"['brostep', 'complextro', 'edm', 'electro', 'pop dance']"
+52,7lQ8MOhq6IN2w8EYcFNSUk,90,True,290320,0.908,0.669,7,-2.827,1,0.0738,0.00286,0.0,0.237,0.662,112.238,4,"['detroit hip hop', 'hip hop', 'rap']"
+53,00Blm7zeNqgYLPtW6zg8cj,77,True,193506,0.687,0.781,1,-4.806,1,0.053,0.0361,0.0,0.0755,0.688,97.014,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+54,03fs6oV5JAlbytRYf3371S,75,False,187047,0.568,0.841,8,-3.802,1,0.0261,0.00514,0.000503,0.147,0.668,103.983,4,['contemporary country']
+55,05mDaV9Vb3wrzjF6OPZnhq,74,True,150866,0.617,0.684,0,-3.618,1,0.0439,0.0545,0.0,0.104,0.295,132.113,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+56,09AvsbivV1FQBRAEBJh7UL,70,True,175163,0.601,0.787,0,-6.178,1,0.031,0.0492,0.0,0.142,0.525,134.981,4,['pop']
+57,0Aqi7ArnBrGblW5T6p2jmD,80,False,159381,0.785,0.431,10,-8.756,0,0.0364,0.123,0.0,0.0887,0.236,127.085,4,['melodic rap']
+58,0NA5xAtDra50d0Lfs2uvoh,66,True,230240,0.52,0.594,11,-8.81,0,0.462,0.44,0.0,0.185,0.393,129.216,5,['rap']
+59,0qc4QlcCxVTGyShurEv1UU,68,False,174444,0.59,0.642,7,-3.87,1,0.122,0.0771,0.0,0.105,0.651,107.356,4,"['edm', 'pop dance', 'tropical house']"
+60,5w40ZYhbBMAlHYNDaVJIUu,88,True,184013,0.498,0.897,2,-4.907,1,0.045,0.00136,0.0,0.118,0.373,169.902,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+61,1cQld05IcUDw3RCFt7uymW,76,False,169852,0.659,0.93,0,-5.084,1,0.043,0.00634,0.177,0.104,0.546,135.977,4,"['house', 'tech house', 'uk dance']"
+62,1odExI7RdWc4BT515LTAwj,95,False,212953,0.508,0.43,2,-9.475,0,0.0335,0.83,0.000441,0.093,0.324,130.09,4,['gen z singer-songwriter']
+63,1elhmWW7Bv0MOQj2gAsyoV,64,False,206000,0.687,0.61,8,-4.713,0,0.0499,0.351,0.0,0.175,0.649,128.15,4,"['complextro', 'edm', 'german techno', 'pop', 'pop dance']"
+64,3rb0tMq42WfggucPm0HHkA,83,False,148629,0.607,0.767,5,-6.069,0,0.0474,0.118,0.0,0.122,0.662,123.998,3,"['edm', 'pop dance', 'pop house', 'uk dance']"
+65,7K3BhSpAxZBznislvUMVtn,87,True,163854,0.492,0.675,6,-5.456,1,0.0389,0.467,0.0,0.142,0.478,203.759,4,['contemporary country']
+66,1GfBLbAhZUWdseuDqhocmn,72,False,146571,0.81,0.836,1,-7.721,0,0.0645,0.0515,0.229,0.0598,0.0585,139.979,4,"['brostep', 'complextro', 'edm', 'electro', 'pop dance']"
+67,5YRcIZnrTmdXgZJwmT0LJS,50,False,158733,0.666,0.723,6,-5.104,0,0.0449,0.0151,0.000592,0.057,0.546,159.962,4,"['brostep', 'complextro', 'edm', 'electro', 'pop dance']"
+68,1E0CZWim9mfwrCkXvieES8,60,False,238400,0.379,0.898,11,-2.19,0,0.219,0.0238,0.0265,0.374,0.129,150.223,4,"['brostep', 'canadian electronic', 'dubstep', 'edm', 'electro house', 'progressive electro house']"
+69,0yLdNVWF3Srea0uzk55zFn,66,False,200454,0.707,0.681,0,-4.325,1,0.0668,0.0632,5.15e-06,0.0322,0.646,117.999,4,['pop']
+70,7vzWtCVhEKDmDkMmT3AiUL,56,False,188571,0.662,0.96,10,-4.161,0,0.0393,0.0029,0.205,0.277,0.3,124.986,4,"['brostep', 'complextro', 'edm', 'electro', 'pop dance']"
+71,5uU1uuyaUIBOiiUSQG7Wl3,77,False,157477,0.731,0.85,9,-4.913,1,0.0336,0.252,0.0,0.605,0.644,119.706,4,['contemporary country']
+72,5unjCay0kUjuej5ebn4nS4,71,True,164041,0.851,0.819,7,-5.173,1,0.212,0.337,0.000153,0.0658,0.903,83.154,3,"['dance pop', 'pop']"
+73,2Yt4SXIgmoaPZHGdRafp4P,74,True,222000,0.822,0.788,11,-3.634,0,0.173,0.0838,0.000173,0.359,0.389,111.016,4,['rap']
+74,3AAY8YicetRPlDAkibHLiS,72,True,185933,0.496,0.593,4,-5.154,1,0.0285,0.0476,0.0,0.0909,0.177,91.038,4,['pop']
+75,6qyS9qBy0mEk3qYaH8mPss,87,True,145000,0.712,0.972,10,-0.514,1,0.112,0.00547,7.06e-05,0.128,0.568,119.966,4,['drift phonk']
+76,2HvGzbTKJTP8WuKU1EClIw,53,True,164400,0.475,0.884,2,-2.619,1,0.064,0.00123,0.0842,0.0871,0.224,149.941,4,['partyschlager']
+77,2IRZnDFmlqMuOrYOLnZZyc,82,True,180522,0.889,0.496,4,-6.365,0,0.0905,0.259,0.0,0.252,0.544,86.003,4,"['hip hop', 'philly rap', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+78,5e2ZOmiFEAOFEgXNj1mHEk,57,False,168117,0.57,0.737,1,-4.27,0,0.0685,0.0314,0.0,0.248,0.621,100.052,4,"['edm', 'pop', 'pop dance']"
+79,0wshkEEcJUQU33RSRBb5dv,73,True,152961,0.849,0.433,5,-8.434,0,0.316,0.0407,0.0,0.388,0.395,142.11,4,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+80,722tgOgdIbNe3BEyLnejw4,77,True,188013,0.766,0.809,1,-6.123,1,0.279,0.0011,0.0,0.168,0.325,130.127,4,"['chicago rap', 'hip hop', 'rap']"
+81,1bgKMxPQU7JIZEhNsM1vFs,82,False,142677,0.739,0.586,10,-5.079,0,0.0472,0.0245,0.000252,0.308,0.444,124.026,4,"['dance pop', 'edm', 'pop', 'pop dance', 'progressive electro house']"
+82,3wH4eUkJ1rL5xTU8PZZyOy,62,False,223786,0.539,0.503,2,-5.338,1,0.0385,0.0574,2.34e-05,0.0847,0.836,174.068,4,['pop']
+83,5sIx4BlfYGuZeSLF40N9GH,67,False,217286,0.685,0.508,0,-6.4,1,0.0987,0.193,0.0,0.139,0.315,99.063,4,"['edm', 'pop', 'pop dance', 'tropical house']"
+84,1GN6qqehnqUfUHH1gfK81v,60,False,231000,0.503,0.722,9,-7.595,1,0.103,0.205,3.52e-05,0.0845,0.354,172.006,4,['pop']
+85,63LsMLW7fSp3aISZuscfgI,44,False,223000,0.719,0.703,5,-4.93,0,0.0392,0.032,1.14e-05,0.0656,0.72,101.984,4,"['dance pop', 'edm', 'electro house', 'moombahton', 'pop', 'pop dance']"
+86,0fy3MozJBrM858gEIo3Yec,52,False,210666,0.582,0.882,4,-3.061,1,0.367,0.00809,0.013,0.205,0.346,89.956,4,"['glitch hop', 'jamtronica', 'jazztronica', 'livetronica']"
+87,1VLtjHwRWOVJiE5Py7JxoQ,84,True,132832,0.832,0.534,1,-7.813,0,0.253,0.345,0.0,0.165,0.116,93.924,4,"['chicago rap', 'rap']"
+88,31De8hk4QgDsbS26w06h21,0,True,222000,0.825,0.78,11,-3.705,0,0.142,0.0923,7.96e-05,0.361,0.379,111.004,4,['rap']
+89,4uUG5RXrOk84mYEfFvj3cK,92,True,175238,0.561,0.965,7,-3.673,0,0.0343,0.00383,7.07e-06,0.371,0.304,128.04,4,"['big room', 'dance pop', 'edm', 'pop', 'pop dance']"
+90,5tiZBnx5IvETA0Pj3gELjn,65,True,201398,0.742,0.679,7,-4.594,1,0.0259,0.0488,0.0,0.0754,0.856,100.041,4,['pop']
+91,6FAsJDkg4y5JSWP9ZMKlDj,57,False,179426,0.625,0.568,11,-5.663,1,0.0324,0.288,0.0,0.674,0.348,85.545,3,['pop']
+92,1l4iQsOZ5sOXZPMQLvouaB,74,False,166720,0.701,0.875,11,-4.1,1,0.0757,0.0262,7.32e-06,0.137,0.84,111.976,4,['pop']
+93,3nqQXoyQOWXiESFLlDF1hG,86,False,156943,0.714,0.472,2,-7.375,1,0.0864,0.013,4.51e-06,0.266,0.238,131.121,4,"['pop', 'uk pop']"
+94,7kJlTKjNZVT26iwiDUVhRm,67,True,178583,0.654,0.796,2,-4.761,0,0.122,0.0188,0.0,0.0948,0.491,108.854,4,"['dance pop', 'pop', 'uk pop']"
+95,5lfWrciYtohtIMVDVZd0Rf,66,False,229282,0.81,0.733,9,-6.338,1,0.0444,0.276,6.73e-06,0.288,0.9,125.975,4,"['dance pop', 'edm', 'electro house', 'house', 'pop', 'pop dance', 'progressive house', 'uk dance']"
+96,5CSKbHjpqborGnlzagyaDo,70,False,258004,0.659,0.667,11,-4.668,0,0.0339,0.00173,2.85e-05,0.1,0.468,115.982,4,"['dance pop', 'pop', 'uk pop']"
+97,6CN7FuZ7o1xle9TNxApGeQ,63,True,126443,0.706,0.76,8,-4.702,1,0.0369,0.0599,1.46e-06,0.202,0.564,95.499,4,['melodic rap']
+98,4fCE1SCDulouoac9Q8XroU,58,False,150819,0.714,0.798,5,-4.239,0,0.0612,0.00248,0.000678,0.103,0.659,119.017,4,"['canadian electronic', 'dutch house', 'edm', 'electro house', 'pop dance', 'progressive electro house', 'slap house']"
+99,3Kkjo3cT83cw09VJyrLNwX,81,False,225148,0.534,0.725,1,-3.906,1,0.046,0.091,0.0,0.0264,0.55,88.098,4,"['british soul', 'pop', 'pop soul', 'uk pop']"
+100,65jyPaGDybCbfGTDJdwOlb,44,False,140029,0.638,0.882,5,-4.008,1,0.254,0.0697,9.64e-06,0.386,0.466,127.863,4,"['lithuanian edm', 'lithuanian electronic']"
+101,1vxjmNMsJRLEhoYGpOXOXB,47,True,229198,0.563,0.874,2,-4.122,1,0.0377,0.114,0.0,0.109,0.232,102.021,4,['pop edm']
+102,57VeLYXrvNxe8Vs18K2M9W,70,True,168906,0.945,0.582,11,-8.357,0,0.0719,0.114,0.0,0.103,0.907,108.025,4,"['deep underground hip hop', 'kentucky hip hop', 'pop rap', 'rap']"
+103,4NjTrZ2IQeWnIbzyY2SOfz,53,False,156167,0.735,0.689,7,-5.41,0,0.0513,0.00381,0.00146,0.409,0.71,116.94,4,['norwegian pop']
+104,463CkQjx2Zk1yXoBuierM9,75,False,203064,0.702,0.825,6,-3.787,0,0.0601,0.00883,0.0,0.0674,0.915,102.977,4,"['dance pop', 'pop', 'uk pop']"
+105,3t4KHjd8uQpJJ2fa0fRIpR,2,True,175163,0.601,0.787,0,-6.178,1,0.031,0.0492,0.0,0.142,0.525,134.981,4,['pop']
+106,4AqN8IdKCfItCSbuaFch81,63,False,197963,0.656,0.89,5,-4.981,0,0.187,0.201,1.99e-06,0.101,0.268,100.037,4,"['german dance', 'slap house']"
+107,4Bn3YE0E06WnPLT1VHYPb8,49,False,170858,0.74,0.517,1,-6.233,0,0.0506,0.0183,0.0,0.0558,0.698,139.917,4,['pov: indie']
+108,4tEArA9SQlyNrBHpjNZAWM,50,True,212520,0.732,0.634,9,-8.822,1,0.229,0.00454,2.8e-05,0.297,0.279,167.01,4,"['melodic rap', 'rap', 'trap']"
+109,6qCsKKS7Ol63SJW3LOIX5R,70,False,205733,0.551,0.756,2,-4.948,1,0.0652,0.0511,0.0,0.0765,0.618,175.984,4,['pop']
+110,5Hv1QAbRWrUSUHaT0CmnMS,60,False,222440,0.595,0.844,7,-4.678,1,0.0331,0.0137,0.0,0.234,0.603,127.981,4,"['blues rock', 'classic rock', 'mexican classic rock']"
+111,1r8ZCjfrQxoy2wVaBUbpwg,77,True,164781,0.376,0.657,7,-4.658,1,0.0768,0.0858,0.0,0.0884,0.203,80.565,4,['australian hip hop']
+112,4IxeKzzxUSEgivgtbSbyIK,67,True,169824,0.517,0.668,1,-6.012,1,0.116,0.0712,0.0,0.407,0.646,79.782,4,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+113,1WCEAGGRD066z2Q89ObXTq,80,False,169756,0.601,0.713,4,-3.758,0,0.0449,0.0282,0.0,0.158,0.464,122.872,4,"['big room', 'dance pop', 'edm', 'pop', 'pop dance']"
+114,6f5ExP43esnvdKPddwKXJH,78,False,160656,0.717,0.671,0,-5.077,0,0.0337,0.0018,2.54e-06,0.0921,0.699,110.054,4,['scandipop']
+115,5eU0KDvZVfFl4ehleRwGGF,56,False,144000,0.747,0.495,11,-8.584,1,0.0491,0.151,0.0,0.146,0.489,145.095,4,['melodic rap']
+116,3vkQ5DAB1qQMYO4Mr9zJN6,83,False,292613,0.749,0.491,10,-9.655,1,0.0403,0.02,0.00899,0.159,0.536,119.528,4,"['europop', 'swedish pop']"
+117,6tTPc9BEDYExwIEg8QGxvL,49,False,174811,0.59,0.677,0,-5.395,1,0.0577,0.00882,0.000147,0.157,0.304,184.573,4,['pop dance']
+118,1FhmdSGBoEqFLW16PlZOiZ,50,True,181720,0.616,0.741,7,-4.272,0,0.0426,0.00251,0.0,0.307,0.431,122.012,4,['uk hip hop']
+119,5NeFmsnXBy6xVbz8pesM5l,52,False,191785,0.662,0.823,9,-4.7,1,0.0971,0.073,0.0,0.0833,0.435,118.958,4,['pop edm']
+120,7uLFOXgLrS90tEYPO1DGXy,69,True,215303,0.849,0.631,3,-4.241,0,0.0637,0.171,0.0,0.149,0.55,135.997,4,"['melodic rap', 'rap', 'trap']"
+121,4iJyoBOLtHqaGxP12qzhQI,84,True,198081,0.677,0.696,0,-6.181,1,0.119,0.321,0.0,0.42,0.464,90.03,4,"['canadian pop', 'pop']"
+122,0tyR7Bu9P086aWBFZ4QJoo,73,True,174067,0.369,0.845,0,-3.449,0,0.0611,0.0493,0.0,0.416,0.782,78.532,4,"['modern rock', 'neon pop punk', 'pop emo', 'pop punk']"
+123,59o6ojGNGJOYiVJSzC6Lsa,76,True,162992,0.709,0.783,5,-5.944,0,0.0551,0.108,4.1e-05,0.103,0.648,127.043,4,"['big room', 'dance pop', 'edm', 'pop', 'pop dance']"
+124,69LvvkHnFFnX3d5eNObtMo,63,True,138097,0.569,0.85,1,-5.134,1,0.055,0.000279,0.0,0.337,0.769,162.061,4,"['ohio hip hop', 'pop rap']"
+125,0xzI1KAr0Yd9tv8jlIk3sn,75,False,172714,0.762,0.861,0,-3.296,1,0.0955,0.0185,0.0,0.264,0.955,120.048,4,['pop']
+126,1Is5izEXFW6gVFvvq2XdEw,50,True,207085,0.501,0.761,0,-3.414,1,0.0945,0.0192,0.0,0.0711,0.35,146.052,4,[]
+127,4hR3hQKELrARHNZJ51D14s,61,False,198947,0.644,0.349,2,-5.315,0,0.0364,0.206,3.36e-05,0.125,0.246,94.971,4,"['brostep', 'canadian electronic', 'edm', 'electra', 'electro house']"
+128,1VSuFS7PahCN3SWbOcQ98m,72,True,171620,0.654,0.875,1,-4.845,1,0.0744,0.000417,0.0086,0.194,0.522,99.975,4,"['ohio hip hop', 'pop rap']"
+129,2eFjKl5cyPPYElDByCh6Tb,54,False,165779,0.526,0.667,9,-5.451,1,0.0437,0.0505,0.0,0.321,0.43,155.085,4,"['edm', 'melodic dubstep', 'pop dance']"
+130,2lUDBd7JrgAMltcp6dcd7D,60,True,204626,0.793,0.481,9,-9.258,1,0.124,0.019,1.09e-06,0.139,0.395,132.202,4,"['melodic rap', 'rap', 'trap']"
