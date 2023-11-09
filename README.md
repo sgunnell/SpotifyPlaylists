@@ -30,7 +30,7 @@ After completing the Deep Learning and Machine Learning Specialization courses f
 - Spotify API
 - Pytorch
 - Scikit-learn
-- Flask
+- Flask or Flask TBD
 
 ## Installation
 
@@ -50,13 +50,6 @@ After completing the Deep Learning and Machine Learning Specialization courses f
 
 4. Configure your API credentials in the project.
 
-5. Run the Flask app:
-
-   ```bash
-   python app.py
-   ```
-
-6. Access the application at `http://localhost:5000` in your web browser.
 
 ## Usage
 
