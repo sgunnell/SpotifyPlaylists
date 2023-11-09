@@ -30,7 +30,7 @@ After completing the Deep Learning and Machine Learning Specialization courses f
 - Spotify API
 - Pytorch
 - Scikit-learn
-- Flask or Flask TBD
+- Flask or Django TBD
 
 ## Installation
 
